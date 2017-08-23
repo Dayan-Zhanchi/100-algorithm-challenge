@@ -5,3 +5,7 @@
 
 # Java
 *.class
+
+# Intellij
+.idea/
+
