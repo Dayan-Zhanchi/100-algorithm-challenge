@@ -1,0 +1,1 @@
+The Gale-Shapley algortihm to solve the stable maching problem can be found here: https://en.wikipedia.org/wiki/Stable_marriage_problem 
