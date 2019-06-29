@@ -1,4 +1,4 @@
-base = 10e9
+base = 27
 prime = 10e9 + 7  # well known choice of prime in competitive programming
 
 
