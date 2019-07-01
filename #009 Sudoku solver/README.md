@@ -4,5 +4,4 @@ Link to the algorithm under section backtracking: https://en.wikipedia.org/wiki/
 The algorithm is rather simple, it uses a brute force approach by backtracking whenever a a tested solution 
 doesn't go through. 
 
-Here's a visualization of the backtracking process:
 ![Sudoku backtracking visualization](backtracking.gif)
