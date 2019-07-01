@@ -1,4 +1,4 @@
-base = 10e9
+base = 27
 prime = 10e9 + 7  # well known choice of prime in competitive programming
 
 
@@ -33,7 +33,7 @@ def main():
 def compute_hash(pattern):
     hash = 0
     for i in range(len(pattern)):
-        hash = (hash * base) + ord(pattern[i]) % prime
+        hash = ((hash * base) + ord(pattern[i])) % prime
     return hash
 
 
