@@ -23,6 +23,8 @@ def main():
 
         if bellman_ford() == 1:
             print_all_path_costs()
+        else:
+            print("Found negative cycle in the graph, invalid graph input!")
         edge_list = []
         n -= 1
     return
