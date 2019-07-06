@@ -2,5 +2,7 @@
 [Misra-Gries summary](https://en.wikipedia.org/wiki/Misra%E2%80%93Gries_summary) is a streaming algorithm and
 can be seen as a generalization of the [Boyer-Moore majority vote](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm) case. Instead of 
 only looking for a majority that is 1 element that appears > m/2 times, Misra-Gries looks for some k elements that appear >
-m/(k+1) times. For the rest of the j elements, that don't appear more than m/(k+1) times the output for those can
-be any number in the list.
+m/(k+1) times. If there are less than k elements, say m elements, that appear > m/(k+1) times then the output for the k - m elements can be any number in the data stream.
+
+**Note that the pseudocode for the bound in the second branch, |Keys(A)| < k - 1, is incorrect, because there can be at most k keys.
+In other words, there can be at most k elements that appear > m/(k+1) and the logic for the second branch is to add one such new potential key if the current element is not a key already, which means that there must be a space for such key to be added, thus the k-1 check.** 
