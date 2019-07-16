@@ -2,8 +2,8 @@
 [K-means clustering](https://en.wikipedia.org/wiki/K-means_clustering) is an unsupervised machine learning algorithm, that aims to cluster data points that are near each other 
 according to a centroid, i.e the data points that have the least euclidean distances to a centroid will be divided into the same cluster. 
 It iteratively improves the centroid to a local optimum (not necessarily a global) by calculating the means of the data points in the cluster. 
-The means are calculated by taking the euclidean distances between each point in the cluster and the origo, adding them all together and div. The number of
-centroids is determined by the k, which is the hyperparameter.
+The means are calculated by taking the euclidean distances between each point in the cluster and the origo, adding them all together and dividing them with the number of data points
+in the cluster. The number of centroids is determined by k, which is the hyperparameter.
 
 The data used was a randomly generated sample of 700 data points in 5 different clusters with standard deviation of 0.9.
 
