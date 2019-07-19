@@ -19,16 +19,20 @@ def prims(graph):
     pq.put((0, source_node, source_node))
     print(source_node)
     mst = []
+    # the priority queue is the workhorse here, it finds the minimum edge cost at each iteration
+    # so we only have to make sure to add all adjacent edges at each iteration
     while not all(visited):
         weight, curr_node, prev_adj_node = pq.get()
         if visited[curr_node]: continue
         visited[curr_node] = True
+        # this condition is to avoid adding edges to mst at the very first iteration
         if curr_node != prev_adj_node:
             mst.append((curr_node, prev_adj_node, weight))
         adj_edges = graph.adj[curr_node + 1]
 
         for node, weight in adj_edges.items():
             if visited[node - 1]: continue
+            # because we want to store the mst as an edge list, we need to add both the nodes to the queue
             pq.put((weight['weight'], node - 1, curr_node))
     return mst
 
