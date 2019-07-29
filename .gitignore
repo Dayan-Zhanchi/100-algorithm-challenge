@@ -9,3 +9,5 @@
 # Intellij
 .idea/
 
+# virtualenv script
+venv.bat
